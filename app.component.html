@@ -1,0 +1,33 @@
+<input type="text" id="first" #first>
+<input type="text" id="second" #second >
+<input type="number" id="thrid" #third>
+<button (click)="myfun(first,second,third)">click</button>
+<table>
+    <tr>
+        <th>Remove</th>
+        <th>id</th>
+        <th>Name</th>
+        <th>Lname</th>
+        <th>Mobile</th>
+       
+    </tr>
+    <tr *ngFor="let key of arr;let i=index">
+        <td><button (click)="remove(i)">Remove</button></td>
+        <td>{{i+1}}</td>
+        <td >
+            {{key.first}}
+        </td>
+        <td>
+            {{key.second}}
+        </td>
+        <td>
+            {{key.third}}
+        </td>
+    </tr>
+</table>
+<input type="text" placeholder="choice your color" #kiran> 
+<button (click)="fun2(kiran)">click</button> <br>
+<a routerLink="about">About</a> <br>
+<a routerLink="contact">Contacts</a> <br>
+<a routerLink="homd">Home</a> <br>
+<router-outlet></router-outlet>
